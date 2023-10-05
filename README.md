@@ -21,7 +21,7 @@ class AboutMe {
     public function introduce() {
         return "👋 Hello! I'm {$this->name} from {$this->country},
                 a {$this->experience}+ years experienced {$this->role}
-                and a burger lover 🍔.";
+                and a {$this->favoriteFood} lover 🍔.";
     }
 }
 
