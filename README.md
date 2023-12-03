@@ -19,13 +19,18 @@ class AboutMe {
     }
 
     public function introduce() {
-        return "👋 Hello! I'm {$this->name} from {$this->country},
-                a {$this->experience}+ years experienced {$this->role}
-                and a {$this->favoriteFood} lover 🍔.";
+        return sprintf(
+            "👋 Hello! I'm %s from %s, a %d+ years experienced %s and a %s lover 🍔.",
+            $this->name,
+            $this->country,
+            $this->experience,
+            $this->role,
+            $this->favoriteFood
+        );
     }
 }
 
-$aleksandar = new AboutMe("Aleksandar Ciric", "Serbia", 6, "WordPress developer and frontend developer", "burger");
+$aleksandar = new AboutMe("Aleksandar Ciric", "Serbia", 7, "WordPress developer and frontend developer", "burger");
 
 echo $aleksandar->introduce();
 ```
